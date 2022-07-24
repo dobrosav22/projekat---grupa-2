@@ -1,24 +1,11 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    fetch ('http://www.7timer.info/bin/api.pl?lon=113.17&lat=23.09&product=astro&output=json')
+    .then(res=>console.log(res))
+    .then(data=>console.log(data))
   );
 }
 
